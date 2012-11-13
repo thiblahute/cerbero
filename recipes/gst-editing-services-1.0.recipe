@@ -1,0 +1,19 @@
+# -*- Mode: Python -*- vi:si:et:sw=4:sts=4:ts=4:syntax=python
+from cerbero.utils import shell
+
+class Recipe(recipe.Recipe):
+    name = 'gst-editing-services-1.0'
+    version = '1.0'
+    licenses = [License.LGPLv2Plus]
+    config_sh = 'sh ./autogen.sh --noconfigure && ./configure'
+    configure_options = "--disable-examples --with-package-origin='http://www.gstreamer.com' --with-package-name='GStreamer Editing Services (GStreamer SDK)' "
+    remotes = {'upstream': 'git://anongit.freedesktop.org/gstreamer/gst-editing-services'}
+    commit = 'upstream/master'
+    deps = ['gstreamer-1.0', 'gst-plugins-base-1.0', 'gnonlin-1.0', 'libxml2' ]
+
+    files_bins = ['ges-launch-1.0']
+    files_devel = ['include/gstreamer-1.0/ges', 'lib/pkgconfig/gst-editing-services-1.0.pc']
+    files_libs = ['libges-1.0']
+
+#    files_python = ['site-packages/ges%(pext)s']
+

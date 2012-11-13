@@ -1,0 +1,29 @@
+# vi:si:et:sw=4:sts=4:ts=4:syntax=python
+# -*- Mode: Python -*-
+
+
+class Package(package.Package):
+
+    name = 'gstreamer-core-1.0'
+    shortdesc = 'GStreamer core'
+    url = "http://www.gstreamer.com"
+    version = '2012.10'
+    codename = 'Brahmaputra'
+    license = License.LGPL
+    vendor = 'GStreamer Project'
+    org = 'com.gstreamer'
+    uuid = '32fe67c2-4565-411f-8287-e8faa892f853'
+    deps = ['base-system']
+
+    files = ['gstreamer-1.0', 'gst-plugins-base-1.0:bins:libs:core:lang',
+            'gst-sdk-shell',
+            'gst-plugins-good-1.0:plugins_core:lang',
+            'gst-plugins-bad-1.0:plugins_core:lang',
+            'gst-plugins-bad-1.0:plugins_core:lang',
+            'gst-plugins-ugly-1.0:plugins_core:lang']
+    #files_devel = ['gstreamer-static', 'gst-plugins-base-static:plugins_core_devel',
+            #'gst-plugins-good-static:plugins_core_devel', 'gst-plugins-bad-static:plugins_core_devel']
+    platform_files = {
+            Platform.DARWIN: ['gstreamer-osx-framework'],
+            Platform.ANDROID: ['gst-android'],
+            }
