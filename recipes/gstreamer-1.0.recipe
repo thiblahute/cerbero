@@ -16,8 +16,7 @@ class Recipe(recipe.Recipe):
                   'gst-launch-1.0']
 
     files_libs = ['libgstbase-1.0', 'libgstcheck-1.0', 'libgstcontroller-1.0',
-                  'libgstdataprotocol-1.0', 'libgstnet-1.0',
-                  'libgstreamer-1.0']
+                  'libgstnet-1.0', 'libgstreamer-1.0']
 
     files_plugins = ['lib/gstreamer-1.0/libgstcoreelements%(mext)s']
 
@@ -28,7 +27,6 @@ class Recipe(recipe.Recipe):
             'include/gstreamer-1.0/gst/base',
             'include/gstreamer-1.0/gst/check',
             'include/gstreamer-1.0/gst/controller',
-            'include/gstreamer-1.0/gst/dataprotocol',
             'include/gstreamer-1.0/gst/net',
             'lib/pkgconfig/gstreamer-1.0.pc',
             'lib/pkgconfig/gstreamer-base-1.0.pc',

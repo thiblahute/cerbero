@@ -14,7 +14,7 @@ class Recipe(recipe.Recipe):
     platform_deps = { Platform.LINUX: [ 'cdparanoia' ], Platform.ANDROID: [ 'tremor' ] }
     use_system_libs = True
 
-    files_bins = ['gst-discoverer-1.0', 'gst-visualize-1.0']
+    files_bins = ['gst-discoverer-1.0' ]
 
     files_libs = ['libgstapp-1.0', 'libgstaudio-1.0', 'libgstcdda-1.0', 'libgstfloatcast-1.0',
                  'libgstfft-1.0', 'libgstinterfaces-1.0', 'libgstnetbuffer-1.0',
@@ -29,7 +29,6 @@ class Recipe(recipe.Recipe):
              'lib/gstreamer-1.0/libgstaudiorate%(mext)s',
              'lib/gstreamer-1.0/libgstaudioresample%(mext)s',
              'lib/gstreamer-1.0/libgstaudiotestsrc%(mext)s',
-             'lib/gstreamer-1.0/libgstffmpegcolorspace%(mext)s',
              'lib/gstreamer-1.0/libgstgdp%(mext)s',
              'lib/gstreamer-1.0/libgstgio%(mext)s',
              'lib/gstreamer-1.0/libgstpango%(mext)s',
