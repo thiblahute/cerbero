@@ -1,0 +1,22 @@
+# vi:si:et:sw=4:sts=4:ts=4:syntax=python
+# -*- Mode: Python -*-
+
+
+class Package(package.Package):
+
+    name = 'pitivi-nightly'
+    version = '0.90.2.0'
+    shortdesc = 'Pitivi video editor'
+    longdesc = 'Pitivi video editor'
+    url = "http://www.pitivi.org"
+    license = License.LGPL
+    vendor = 'GStreamer Project'
+    org = 'org.freedesktop.gstreamer'
+    uuid = 'd9626750-e8b7-4e40-944d-98b67ed0c6bf'
+    deps = ['gstreamer-1.0-editing', 'gst-python-1.0', 'gtk3+', 'gstreamer-1.0-system',
+    'gstreamer-1.0-codecs', 'gstreamer-1.0-codecs-gpl', 'gstreamer-1.0-libav',
+    'gstreamer-1.0-encoding', 'gstreamer-1.0-effects', 'gstreamer-1.0-codecs-restricted']
+
+    files = ['pitivi', 'numpy']
+    files_devel = []
+

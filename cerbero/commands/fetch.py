@@ -99,8 +99,15 @@ class FetchPackage(Fetch):
     def run(self, config, args):
         store = PackagesStore(config)
         package = store.get_package(args.package[0])
-        return self.fetch(store.cookbook, package.recipes_dependencies(),
-                True, args.reset_rdeps)
+        ordered_recipes = []
+        for recipe in package.recipes_dependencies():
+            recipes = store.cookbook.list_recipe_deps(recipe)
+            # remove recipes already scheduled to be fetched
+            recipes = [x.name for x in recipes if x.name not in ordered_recipes]
+            ordered_recipes.extend(recipes)
+
+        return self.fetch(store.cookbook, ordered_recipes, True,
+                          args.reset_rdeps)
 
 
 register_command(FetchRecipes)

@@ -89,6 +89,8 @@ class GenSdkShell(Command):
         env['CXXFLAGS'] = '-I%s/include ${CXXFLAGS}' % prefix_env
         env['LDFLAGS'] = '-L%s ${LDFLAGS}' % libdir
         env['GIO_EXTRA_MODULES'] = '%s/gio/modules' % libdir
+        env['GI_TYPELIB_PATH'] = '%s/lib/girepository-1.0/${GI_TYPELIB_PATH:+:$GI_TYPELIB_PATH}'\
+                % (prefix_env)
         envstr = 'export %s="%s"\n' % (prefix_env_name, prefix)
         for e, v in env.iteritems():
             envstr += 'export %s="%s"\n' % (e, v)

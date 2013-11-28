@@ -1,0 +1,19 @@
+# vi:si:et:sw=4:sts=4:ts=4:syntax=python
+# -*- Mode: Python -*-
+
+
+class Package(package.Package):
+
+    name = 'gst-python-1.0'
+    shortdesc = 'Gtk GObject Introspection typelibs'
+    longdesc = 'Gst python bindings, using GObject Introspection'
+    url = "http://gstreamer.freedesktop.org"
+    license = License.LGPL
+    vendor = 'GStreamer Project'
+    org = 'org.freedesktop.gstreamer'
+    uuid = 'd9626750-e8b7-4e40-944d-98b67ed0c6bf'
+    deps = ['base-system-1.0', 'gstreamer-1.0-core', 'python-gobject']
+
+    files = ['gst-python-1.0', 'gstreamer-1.0:gi', 'gst-plugins-base-1.0:gi']
+    files_devel = []
+

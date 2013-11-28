@@ -1,0 +1,21 @@
+# vi:si:et:sw=4:sts=4:ts=4:syntax=python
+# -*- Mode: Python -*-
+
+
+class Package(package.Package):
+
+    name = 'gtk3+'
+    shortdesc = 'Gtk toolkit'
+    longdesc = 'Gtk toolkit'
+    url = "http://www.gstreamer.com"
+    license = License.LGPL
+    vendor = 'GStreamer Project'
+    org = 'org.freedesktop.gstreamer'
+    uuid = '58fe67c2-4565-411f-8287-e8fda893f853'
+    deps = ['base-system-1.0']
+
+    files = ['atk', 'gtk+', 'tango-icon-theme', 'gnome-themes-standard']
+    platform_files = {
+        Platform.DARWIN: ['gtk-mac-integration'],
+        Platform.LINUX: ['at-spi2-atk', 'at-spi2-core'],
+    }

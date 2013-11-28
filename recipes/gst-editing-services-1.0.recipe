@@ -8,11 +8,17 @@ class Recipe(recipe.Recipe):
     commit = 'origin/master'
     config_sh = 'sh ./autogen.sh --noconfigure && ./configure'
     configure_options = "--program-prefix= --disable-examples --enable-static "
-    deps = ['gstreamer-1.0', 'gst-plugins-base-1.0' ]
+    deps = ['gnonlin-1.0',
+            'gst-plugins-good-1.0', # videomixer
+    ]
 
     files_bins = ['ges-launch-1.0']
     files_devel = ['include/gstreamer-1.0/ges', 'lib/pkgconfig/gst-editing-services-1.0.pc']
     files_libs = ['libges-1.0']
+
+    #files_python = ['site-packages/gi/overrides/GES.py']
+
+    files_gi = ['lib/girepository-1.0/GES-1.0.typelib', 'share/gir-1.0/GES-1.0.gir']
 
 #    files_python = ['site-packages/ges%(pext)s']
 

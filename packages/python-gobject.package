@@ -1,0 +1,22 @@
+# vi:si:et:sw=4:sts=4:ts=4:syntax=python
+# -*- Mode: Python -*-
+
+
+class Package(package.Package):
+
+    name = 'python-gobject'
+    shortdesc = 'GObject introspection python bindings'
+    longdesc = 'GObject introspection python bindings'
+    url = "https://wiki.gnome.org/action/show/Projects/GObjectIntrospection"
+    license = License.LGPL
+    vendor = 'GStreamer Project'
+    org = 'org.freedesktop.gstreamer'
+    uuid = 'd9626750-e8b7-4e40-944d-98b67ed0c6bf'
+    deps = ['base-system-1.0']
+    sys_deps = {
+        Distro.DEBIAN: ['python'],
+        Distro.REDHAT: ['python']}
+
+
+    files = ['gobject-introspection', 'pygobject']
+    files_devel = []

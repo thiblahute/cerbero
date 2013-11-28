@@ -1,0 +1,20 @@
+# vi:si:et:sw=4:sts=4:ts=4:syntax=python
+# -*- Mode: Python -*-
+
+
+class Package(package.Package):
+
+    name = 'gstreamer-1.0-editing-python'
+    shortdesc = 'GStreamer editing python bindings'
+    longdesc = 'GStreamer editing python bindings'
+    url = "http://www.pitivi.org"
+    license = License.LGPL
+    vendor = 'GStreamer Project'
+    org = 'org.freedesktop.gstreamer'
+    uuid = 'd9626750-e8b7-4e40-944d-98b67ed0c6bf'
+    deps = ['gstreamer-1.0-editing', 'gst-python-1.0']
+
+    sys_deps = {
+        Distro.REDHAT: ['gtk+']}
+
+    files = ['gst-editing-services-1.0:gi']

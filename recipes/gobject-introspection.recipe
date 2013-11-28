@@ -1,0 +1,69 @@
+# -*- Mode: Python -*- vi:si:et:sw=4:sts=4:ts=4:syntax=python
+
+
+class Recipe(recipe.Recipe):
+
+    name = 'gobject-introspection'
+    version = '1.39.0'
+    licenses = [License.LGPLv2]
+    stype = SourceType.TARBALL
+    url = 'http://ftp.gnome.org/pub/GNOME/sources/gobject-introspection/1.39/gobject-introspection-1.39.0.tar.xz'
+
+    deps = ['glib', 'libffi']
+    config_sh = './configure'
+
+    files_bins = ['g-ir-annotation-tool', 'g-ir-compiler',
+                  'g-ir-doc-tool', 'g-ir-generate', 'g-ir-scanner']
+
+    files_misc = ['lib/gobject-introspection/giscanner/',
+                  'lib/gobject-introspection/giscanner/collections/',
+                  'lib/gobject-introspection/giscanner/doctemplates/C/',
+                  'lib/gobject-introspection/giscanner/doctemplates/Python/',
+                  'lib/gobject-introspection/giscanner/doctemplates/Gjs/',
+                  'lib/girepository-1.0/cairo-1.0.typelib',
+                  'lib/girepository-1.0/DBus-1.0.typelib',
+                  'lib/girepository-1.0/DBusGLib-1.0.typelib',
+                  'lib/girepository-1.0/fontconfig-2.0.typelib',
+                  'lib/girepository-1.0/freetype2-2.0.typelib',
+                  'lib/girepository-1.0/GdkPixbuf-2.0.typelib',
+                  'lib/girepository-1.0/Gio-2.0.typelib',
+                  'lib/girepository-1.0/GIRepository-2.0.typelib',
+                  'lib/girepository-1.0/GL-1.0.typelib',
+                  'lib/girepository-1.0/GLib-2.0.typelib',
+                  'lib/girepository-1.0/GModule-2.0.typelib',
+                  'lib/girepository-1.0/GObject-2.0.typelib',
+                  'lib/girepository-1.0/libxml2-2.0.typelib',
+                  'lib/girepository-1.0/Pango-1.0.typelib',
+                  'lib/girepository-1.0/PangoCairo-1.0.typelib',
+                  'lib/girepository-1.0/PangoFT2-1.0.typelib',
+                  'lib/girepository-1.0/win32-1.0.typelib',
+                  'lib/girepository-1.0/xfixes-4.0.typelib',
+                  'lib/girepository-1.0/xft-2.0.typelib',
+                  'lib/girepository-1.0/xlib-2.0.typelib',
+                  'lib/girepository-1.0/xrandr-1.3.typelib',
+                  'share/gir-1.0/cairo-1.0.gir',
+                  'share/gir-1.0/DBus-1.0.gir',
+                  'share/gir-1.0/DBusGLib-1.0.gir',
+                  'share/gir-1.0/fontconfig-2.0.gir',
+                  'share/gir-1.0/freetype2-2.0.gir',
+                  'share/gir-1.0/GdkPixbuf-2.0.gir',
+                  'share/gir-1.0/Gio-2.0.gir',
+                  'share/gir-1.0/GIRepository-2.0.gir',
+                  'share/gir-1.0/GL-1.0.gir',
+                  'share/gir-1.0/GLib-2.0.gir',
+                  'share/gir-1.0/GModule-2.0.gir',
+                  'share/gir-1.0/GObject-2.0.gir',
+                  'share/gir-1.0/libxml2-2.0.gir',
+                  'share/gir-1.0/Pango-1.0.gir',
+                  'share/gir-1.0/PangoCairo-1.0.gir',
+                  'share/gir-1.0/PangoFT2-1.0.gir',
+                  'share/gir-1.0/win32-1.0.gir',
+                  'share/gir-1.0/xfixes-4.0.gir',
+                  'share/gir-1.0/xft-2.0.gir',
+                  'share/gir-1.0/xlib-2.0.gir',
+                  'share/gir-1.0/xrandr-1.3.gir',
+                  ]
+
+
+    files_devel = ['lib/pkgconfig/gobject-introspection-1.0.pc',
+                   'lib/pkgconfig/gobject-introspection-no-export-1.0.pc']
