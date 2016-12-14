@@ -81,7 +81,6 @@ class BuildTools (BootstrapperBase):
         config.prefix = self.config.build_tools_prefix
         config.home_dir = self.config.home_dir
         config.load()
-        config.variants.python3 = False
 
         config.prefix = self.config.build_tools_prefix
         config.build_tools_prefix = self.config.build_tools_prefix
